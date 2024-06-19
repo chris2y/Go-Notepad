@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Location"
+        android:id="@+id/location_text_view"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_below="@+id/button_save_location"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/button_save_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Current Location"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_save_date"
+        android:src="@drawable/add_icon"
+        android:backgroundTint="@color/orange"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="10dp"
+        android:tooltipText="Add new date"
+        android:layout_marginBottom="10dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dates"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:layout_alignParentLeft="true"
+                android:padding="8dp"
+                android:id="@+id/dates"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/map"
+                android:layout_alignParentRight="true"
+                android:layout_margin="20dp"
+                android:id="@+id/locationView" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewDates"
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_below="@+id/dates"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</RelativeLayout>

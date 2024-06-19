@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="8dp"
+android:elevation="4dp"
+android:id="@+id/cardViewDate"
+    android:background="@color/white"
+app:cardCornerRadius="4dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/noteTextView"
+        android:layout_width="wrap_content"
+        android:text="Aberar Makefafeya"
+        android:singleLine="true"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9:12"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        android:id="@+id/timeTextView"/>
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
