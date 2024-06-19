@@ -218,6 +218,8 @@ public class AddNoteActivity extends AppCompatActivity {
                     allPermissionsGranted = false;
                     break;
                 }
+
+
             }
             if (allPermissionsGranted) {
                 // Permissions granted, proceed with saving as PDF
